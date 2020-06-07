@@ -15,3 +15,12 @@ Resources:
               - arn:aws:s3:::masarakki/Dojin/*
   Group:
     Type: AWS::IAM::Group
+  Tadd:
+    Type: AWS::IAM::User
+    Properties:
+      Groups:
+        - !Ref Group
+  TaddAccessKey:
+    Type: AWS::IAM::AccessKey
+    Properties:
+      UserName: !Ref Tadd

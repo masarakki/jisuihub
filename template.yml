@@ -24,3 +24,6 @@ Resources:
     Type: AWS::IAM::AccessKey
     Properties:
       UserName: !Ref Tadd
+Outputs:
+  TaddSecret:
+    Value: !GetAtt TaddAccessKey.SecretAccessKey

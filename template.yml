@@ -9,6 +9,11 @@ Resources:
         Statement:
           - Effect: Allow
             Action:
+              - s3:ListBucket
+            Resource:
+              - arn:aws:s3:::masarakki
+          - Effect: Allow
+            Action:
               - s3:ListObjectsV2
               - s3:GetObject
               - s3:PutObject
